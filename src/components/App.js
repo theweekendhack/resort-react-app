@@ -1,21 +1,52 @@
 import React from 'react'
 
-import Header from "./Header";
-import Footer from "./Footer";
-import Hero from "./Hero";
-import ResortListing from "./ResortListing";
+import HomePage from "../pages/HomePage";
+import AboutPage from "../pages/AboutPage"
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 
 import "../assets/css/App.css";
+import "../assets/css/utilities.css";
 
 const App = () => {
   return (
-    <div>
-       <Header/>
-       <Hero/>
-       <ResortListing/>
-       <Footer/>
-    </div>
+      <Router>
+          
+          <Switch>
+
+              <Route path="/about-us">    
+                  <AboutPage/>
+              </Route>
+                    
+              <Route path="product/listing">    
+                    
+              </Route>
+      
+              <Route path="/login">    
+                    
+              </Route>
+
+              <Route path="/registration">    
+                    
+              
+              </Route>
+      
+              <Route path="/product/:id">    
+
+
+              </Route>
+
+              <Route path="/">
+                <HomePage/>
+              </Route>
+
+          </Switch>
+      </Router>
   )
 }
 

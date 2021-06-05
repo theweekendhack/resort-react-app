@@ -1,10 +1,22 @@
 import React from 'react'
 
-const ResortCard = () => {
+
+
+const ResortCard = (props) => {
     return (
-        <div>
-            <h1>Resort Card</h1>
+      
+    <div className="resort-card">
+
+        <a href = "/"> 
+            <img src={props.image} alt=""/>   
+        </a> 
+
+        <div className="resortContent">
+            <h3>{props.title}</h3>
+            <p>${props.price} per night</p>
         </div>
+        
+    </div>
     )
 }
 

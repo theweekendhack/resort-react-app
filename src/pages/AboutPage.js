@@ -1,12 +1,17 @@
 import React from 'react'
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Hero from "../components/Hero";
+
+import bgImg from "../assets/img/resortBg2.jpeg"
 
 const AboutPage = () => {
     return (
         <div class="grid grid-row-3" id="main-container">
             <Header/>
             <main>
+
+                <Hero title={<>The world is slowly coming back.<br/> Ensure that you book your resort now!</>} bgImage={bgImg}/>
                 <section id="about-section">
 
                     <div class= "container">

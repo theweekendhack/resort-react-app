@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 
 import HomePage from "../pages/HomePage";
 import AboutPage from "../pages/AboutPage"
@@ -14,17 +14,40 @@ import "../assets/css/App.css";
 import "../assets/css/utilities.css";
 
 const App = () => {
+
+  const [resorts, setResorts] =useState([]);
+
+
+  useEffect(()=>{
+
+      fetch("http://localhost:5000/resorts?featured=true")
+      .then(res=>res.json())
+      .then(data=>{
+
+
+        setResorts(data);
+
+
+      })
+
+  },[])
+ 
   return (
       <Router>
-          
+        
           <Switch>
+
+      
+              <Route exact  path="/">
+                <HomePage resorts={resorts}/>
+              </Route>
 
               <Route path="/about-us">    
                   <AboutPage/>
               </Route>
                     
-              <Route path="product/listing">    
-                    
+              <Route path="/product/listing">    
+                    {/* <ProductListin /> */}   
               </Route>
       
               <Route path="/login">    
@@ -41,9 +64,6 @@ const App = () => {
 
               </Route>
 
-              <Route path="/">
-                <HomePage/>
-              </Route>
 
           </Switch>
       </Router>

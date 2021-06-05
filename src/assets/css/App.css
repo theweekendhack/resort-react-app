@@ -71,7 +71,6 @@ header ul
     position: relative;
     color:white;
     font-weight:bolder;
-    background-image: url("../img/resortBg.jpeg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -186,7 +185,6 @@ header ul
 
 
 }
-
 
 /*Registration*/
 

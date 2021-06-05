@@ -1,12 +1,20 @@
 import React from 'react'
 
+import Header from "./Header";
+import Footer from "./Footer";
+import Hero from "./Hero";
+import ResortListing from "./ResortListing";
 
-import "../assets/css/App.css"
+
+import "../assets/css/App.css";
 
 const App = () => {
   return (
     <div>
-        <h1>Kadeem Best</h1>
+       <Header/>
+       <Hero/>
+       <ResortListing/>
+       <Footer/>
     </div>
   )
 }

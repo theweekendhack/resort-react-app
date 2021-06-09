@@ -1,7 +1,8 @@
 import React,{useState,useEffect} from 'react'
 
 import HomePage from "../pages/HomePage";
-import AboutPage from "../pages/AboutPage"
+import AboutPage from "../pages/AboutPage";
+import Registration from "../pages/RegistrationPage";
 
 import {
   BrowserRouter as Router,
@@ -12,6 +13,7 @@ import {
 
 import "../assets/css/App.css";
 import "../assets/css/utilities.css";
+import RegistrationPage from '../pages/RegistrationPage';
 
 const App = () => {
 
@@ -20,13 +22,13 @@ const App = () => {
 
   useEffect(()=>{
 
+   
       fetch("http://localhost:5000/resorts?featured=true")
       .then(res=>res.json())
       .then(data=>{
 
-
+        console.log(data)
         setResorts(data);
-
 
       })
 
@@ -55,8 +57,7 @@ const App = () => {
               </Route>
 
               <Route path="/registration">    
-                    
-              
+                  <RegistrationPage/>
               </Route>
       
               <Route path="/product/:id">    

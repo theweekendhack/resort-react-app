@@ -1,67 +1,94 @@
 {
-    "resorts": [
-      
-        {
-            "id":1,
-            "title":"Resort 1",
-            "price" : 50,
-            "pic" : "resort1.webp",
-            "details" : "blah bla blah",
-            "featured" : true
-          },
-      
-          {
-            "id":2,
-            "title":"Trinidad and Tobago DP",
-            "price":60,
-            "pic" : "resort2.webp",
-            "details" : "blah bla blah",
-            "featured" : true
-      
-          },
-          {
-            "id":3,
-            "title":"Resort 3",
-            "price" : 70,
-            "pic" : "resort3.webp",
-            "details" : "blah bla blah",
-            "featured" : false
-          },
-          {
-            "id":4,
-            "title":"Resort 4",
-            "price" : 90,
-            "pic" : "resort4.webp",
-            "details" : "blah bla blah",
-            "featured" : false
-      
-          },
-      
-          {
-            "id":5,
-            "title":"Resort 5",
-            "price": 510,
-            "pic" : "resort1.webp",
-            "details" : "blah bla blah",
-            "featured" : false
-      
-          },
-          {
-            "id":5,
-            "title":"Resort 5",
-            "price": 510,
-            "pic" : "resort1.webp",
-            "details" : "blah bla blah",
-            "featured" : false      
-          }
-    ],
-
-
-    "users" : [
-
-
-    ]
-
-
-    
-  }
+  "resorts": [
+    {
+      "id": 1,
+      "title": "Resort 1",
+      "price": 50,
+      "pic": "resort1.webp",
+      "details": "blah bla blah",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Trinidad and Tobago DP",
+      "price": 60,
+      "pic": "resort2.webp",
+      "details": "blah bla blah",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "Resort 3",
+      "price": 70,
+      "pic": "resort3.webp",
+      "details": "blah bla blah",
+      "featured": false
+    },
+    {
+      "id": 4,
+      "title": "Resort 4",
+      "price": 90,
+      "pic": "resort4.webp",
+      "details": "blah bla blah",
+      "featured": false
+    },
+    {
+      "id": 5,
+      "title": "Resort 5",
+      "price": 510,
+      "pic": "resort1.webp",
+      "details": "blah bla blah",
+      "featured": false
+    },
+    {
+      "id": 5,
+      "title": "Resort 5",
+      "price": 510,
+      "pic": "resort1.webp",
+      "details": "blah bla blah",
+      "featured": true
+    }
+  ],
+  "users": [
+    {
+      "firstName": "Kadeem",
+      "lastName": "Best",
+      "email": "kadeem.best@theweekendhack.com",
+      "password": "1",
+      "cpassword": "1",
+      "id": 1
+    },
+    {
+      "firstName": "Justin",
+      "lastName": "Patterson",
+      "email": "justin@pat.com",
+      "password": "1",
+      "cpassword": "1",
+      "id": 2
+    },
+    {
+      "firstName": "Justin",
+      "lastName": "Patterson",
+      "email": "justin@pat.com",
+      "password": "1",
+      "cpassword": "1",
+      "id": 3
+    },
+    {
+      "firstName": "Gabby",
+      "lastName": "Pantin",
+      "email": "gabby@pan",
+      "password": "1",
+      "cpassword": "1",
+      "id": 4
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "password": "",
+      "cpassword": "",
+      "id": 5
+    }
+  ]
+}

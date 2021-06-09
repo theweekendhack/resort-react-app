@@ -13,7 +13,6 @@ const ResortListing = (props) => {
                 
             <h1>Featured Resort</h1>
 
-
             <div className="grid grid-gap-1 grid-row-gap-2 grid-col-4">
                 {props.resorts.map((resort)=>(<ResortCard key={resort.id} title={resort.title} details={resort.details} price={resort.price}  pic={resort.pic}/>))}
             </div>

@@ -1,8 +1,10 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState} from 'react'
 
 import HomePage from "../pages/HomePage";
 import AboutPage from "../pages/AboutPage";
-import Registration from "../pages/RegistrationPage";
+import RegistrationPage from "../pages/RegistrationPage";
+import ResortContext from "../context/ResortContext";
+import ResortListingPage from "../pages/ResortListingPage"
 
 import {
   BrowserRouter as Router,
@@ -13,57 +15,46 @@ import {
 
 import "../assets/css/App.css";
 import "../assets/css/utilities.css";
-import RegistrationPage from '../pages/RegistrationPage';
 
 const App = () => {
 
   const [resorts, setResorts] =useState([]);
-
-
-  useEffect(()=>{
-
-   
-      fetch("http://localhost:5000/resorts?featured=true")
-      .then(res=>res.json())
-      .then(data=>{
-
-        console.log(data)
-        setResorts(data);
-
-      })
-
-  },[])
  
+
   return (
       <Router>
         
           <Switch>
 
-      
-              <Route exact  path="/">
-                <HomePage resorts={resorts}/>
-              </Route>
+             <ResortContext.Provider value={{resorts,setResorts}}>
 
-              <Route path="/about-us">    
-                  <AboutPage/>
-              </Route>
-                    
-              <Route path="/product/listing">    
-                    {/* <ProductListin /> */}   
-              </Route>
-      
-              <Route path="/login">    
-                    
-              </Route>
+              
+                <Route exact  path="/">
+                  <HomePage/>
+                </Route>
 
-              <Route path="/registration">    
-                  <RegistrationPage/>
-              </Route>
-      
-              <Route path="/product/:id">    
+                <Route path="/about-us">    
+                    <AboutPage/>
+                </Route>
+                      
+                <Route path="/resorts">    
+                      <ResortListingPage/>  
+                </Route>
+        
+                <Route path="/login">    
+                      
+                </Route>
+
+                <Route path="/registration">    
+                    <RegistrationPage/>
+                </Route>
+        
+                <Route path="/product/:id">    
 
 
-              </Route>
+                </Route>
+
+              </ResortContext.Provider>
 
 
           </Switch>
